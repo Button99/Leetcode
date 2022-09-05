@@ -1,0 +1,24 @@
+## Java
+
+class Solution {
+    public long[] sumOfThree(long num) {
+        long[] seq= new long[3];
+        long[] seq2=new long[0];
+        if(num == 0) {
+            seq[0]=-1;
+            seq[1]=0;
+            seq[2]=1;
+            return seq;
+        }
+        if(num ==4)
+            return seq2;
+        long div3=num/3;
+        if(num == (div3)+(div3-1)+(div3+1)) {
+            seq[0]=div3-1;
+            seq[1]=div3;
+            seq[2]=div3+1;
+            return seq;
+        }
+        return seq2;
+    }
+}
